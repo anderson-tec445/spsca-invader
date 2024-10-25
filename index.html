@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Especifica que este documento é um HTML5. -->
+
+<html lang="pt-br">
+<!-- Inicia o documento HTML e define o idioma 
+        como português do Brasil. -->
+
+<head>
+<!-- Abre a seção de cabeçalho da página, onde são 
+        colocadas informações sobre o documento, 
+        como metadados, título e links para CSS. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres do 
+            documento para UTF-8, que inclui a maioria 
+            dos caracteres de idiomas humanos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Assegura que a página é responsiva. A largura 
+            da viewport é definida como a largura do 
+            dispositivo, e a escala inicial é 1.0, 
+            significando que a página será exibida em 
+            uma escala de 100%. -->
+
+    <title>Space Invaders</title>
+    <!-- Define o título da página, que aparecerá na 
+            aba do navegador. -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclui um arquivo CSS externo chamado 'styles.css', que 
+            contém os estilos para formatar a página. -->
+
+</head>
+<!-- Fecha a seção de cabeçalho da página. -->
+
+<body>
+<!-- Inicia o corpo do documento HTML, onde todo o 
+            conteúdo visível da página é inserido. -->
+
+    <div id="containerJogo">
+    <!-- Cria uma divisão (div) que serve como um contêiner para 
+            todos os elementos do jogo, facilitando a 
+            organização e estilização. -->
+
+        <h1 id="tituloJogo">Space Invaders</h1>
+        <!-- Insere um cabeçalho de primeiro nível (h1) que 
+                contém o título do jogo. -->
+
+        <p id="pontuacao">Pontuação: 0</p>
+        <!-- Cria um parágrafo para mostrar a pontuação do 
+                jogador. Inicialmente, está definido como 0. -->
+
+        <p id="vidas">Vidas: 3</p>
+        <!-- Cria um parágrafo para mostrar as vidas restantes 
+                do jogador, começando com 3. -->
+
+        <audio id="somTiro" src="tiro.mp3"></audio>
+        <!-- Inclui um elemento de áudio para reproduzir um som 
+                de tiro. O arquivo 'tiro.mp3' é especificado 
+                como a fonte do som. -->
+
+        <canvas id="telaJogo" width="800" height="600"></canvas>
+        <!-- Cria um elemento canvas, que é usado para desenhar 
+                gráficos via scripting (geralmente JavaScript). Aqui, 
+                ele é usado como a área de jogo com largura de 800 
+                pixels e altura de 600 pixels. -->
+
+    </div>
+    <!-- Fecha a div que contém os elementos do jogo. -->
+
+    <div id="modal" class="modal">
+    <!-- Cria uma nova divisão com identificador 'modal' e a 
+                classe 'modal'. Esta div será usada como uma janela 
+                modal para mensagens de jogo, como game over ou pausa. -->
+
+        <div class="modal-content">
+        <!-- Define o conteúdo da janela modal, utilizando uma div 
+                com a classe 'modal-content' para facilitar a estilização. -->
+
+            <p id="mensagemModal"></p>
+            <!-- Cria um parágrafo dentro da modal para exibir 
+                    mensagens para o jogador. -->
+
+            <button id="botaoContinuar" class="botao">Continuar</button>
+            <!-- Adiciona um botão para permitir ao jogador 
+                    continuar o jogo. Este botão só aparece se a 
+                    modal permitir continuação. -->
+
+            <button id="botaoTerminar" class="botao">Terminar</button>
+            <!-- Adiciona um botão que permite ao jogador 
+                    terminar o jogo e reiniciar. -->
+
+        </div>
+        <!-- Fecha a div que contém o conteúdo da modal. -->
+
+    </div>
+    <!-- Fecha a div da janela modal. -->
+
+    <script src="space-invaders.js"></script>
+    <!-- Liga um arquivo JavaScript externo chamado 'space-invaders.js' 
+                ao documento. Este script contém a lógica de 
+                jogo para Space Invaders. -->
+
+</body>
+<!-- Fecha o corpo do documento HTML. -->
+
+</html>
+<!-- Fecha a tag HTML, indicando o fim do documento. -->

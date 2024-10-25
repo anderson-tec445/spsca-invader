@@ -1,0 +1,206 @@
+body {
+
+    margin: 0;
+    /* Remove a margem padrão do corpo do documento, 
+            garantindo que não haverá espaço extra ao 
+            redor dos elementos dentro dele. */
+
+    padding: 0;
+    /* Remove o preenchimento padrão do corpo do documento, 
+            para que o conteúdo esteja diretamente alinhado 
+            com as bordas da janela do navegador. */
+
+    display: flex;
+    /* Define o modelo de layout para Flexbox, o que permite um 
+            alinhamento avançado de elementos filhos dentro 
+            do corpo. */
+
+    justify-content: center;
+    /* Centraliza os elementos filhos horizontalmente 
+            dentro do corpo quando usando Flexbox. */
+
+    align-items: center;
+    /* Centraliza os elementos filhos verticalmente dentro do 
+            corpo quando usando Flexbox. */
+
+    height: 100vh;
+    /* Define a altura do corpo para ser igual a 100% da altura 
+            da viewport (área visível da janela do navegador). */
+
+    background-color: #000;
+    /* Define a cor de fundo do corpo para preto. */
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes para Arial, que é uma fonte 
+            sem serifa, com uma alternativa genérica 'sans-serif' se 
+            o Arial não estiver disponível. */
+
+}
+
+#containerJogo {
+
+    text-align: center;
+    /* Alinha o texto e, consequentemente, alguns tipos de 
+            elementos filhos (como botões e cabeçalhos) ao 
+            centro horizontalmente. */
+
+    position: relative;
+    /* Define a posição do contêiner do jogo como relativa, 
+            permitindo que os elementos filhos posicionados 
+            absolutamente se posicionem em relação a este contêiner. */
+
+}
+
+#tituloJogo {
+
+    font-size: 36px;
+    /* Define o tamanho da fonte do título do jogo para 36 pixels. */
+
+    color: #fff;
+    /* Define a cor do texto para branco. */
+
+    margin-bottom: 20px;
+    /* Adiciona uma margem abaixo do título do jogo para separá-lo 
+            visualmente dos elementos que estão abaixo dele. */
+
+}
+
+
+#pontuacao {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels, 
+            tornando o texto facilmente legível. */
+
+    color: #fff;
+    /* Define a cor do texto para branco, garantindo 
+            contraste com o fundo escuro. */
+
+    margin-bottom: 10px;
+    /* Adiciona uma margem abaixo da pontuação para 
+            separá-la visualmente dos elementos abaixo. */
+
+}
+
+#vidas {
+
+    font-size: 24px;
+    /* Define o tamanho da fonte para 24 pixels, 
+            similar ao elemento de pontuação, 
+            mantendo consistência no design. */
+
+    color: #fff;
+    /* Define a cor do texto para branco, mantendo a 
+            legibilidade contra o fundo escuro. */
+
+}
+
+canvas {
+
+    border: 2px solid #fff;
+    /* Adiciona uma borda branca de 2 pixels ao redor do 
+            elemento canvas, destacando-o no fundo preto e 
+            delineando a área de jogo. */
+
+}
+
+.modal {
+
+    display: none;
+    /* Inicialmente oculta a janela modal, que só 
+            será exibida mediante ação específica no jogo. */
+
+    position: fixed;
+    /* Fixa a posição da janela modal em relação à viewport, 
+            fazendo com que ela não se mova mesmo ao rolar a página. */
+
+    z-index: 1;
+    /* Define a pilha de ordem de camadas da janela modal. Um valor 
+            maior traz a modal para frente de outros elementos 
+            com z-index menor. */
+
+    left: 0;
+    /* Alinha o lado esquerdo da modal com o lado 
+            esquerdo da viewport. */
+
+    top: 0;
+    /* Alinha o topo da modal com o topo da viewport. */
+
+    width: 100%;
+    /* Define a largura da modal para cobrir 100% da largura da viewport. */
+
+    height: 100%;
+    /* Define a altura da modal para cobrir 100% da altura da viewport. */
+
+    overflow: auto;
+    /* Permite a rolagem dentro da modal se o conteúdo 
+            exceder a altura ou largura da mesma. */
+
+    background-color: rgba(0,0,0,0.4);
+    /* Define a cor de fundo da modal para preto com uma 
+            opacidade de 40%, criando um efeito de sobreposição 
+            que ainda permite ver o fundo. */
+
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo da modal usando Flexbox. */
+
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo da modal usando Flexbox. */
+
+}
+
+
+.modal-content {
+
+    background-color: #fff;
+    /* Define a cor de fundo do conteúdo da modal para branco, 
+            garantindo que o texto e os elementos dentro dela 
+            sejam facilmente visíveis. */
+
+    margin: auto;
+    /* Centraliza automaticamente o conteúdo da modal no 
+            contêiner pai, que é útil para manter o conteúdo 
+            alinhado e centrado horizontalmente. */
+
+    padding: 20px;
+    /* Adiciona preenchimento de 20 pixels em todas as 
+            direções dentro do contêiner do conteúdo da modal, 
+            aumentando o espaço entre os bordos internos da 
+            modal e seu conteúdo. */
+
+    border: 1px solid #888;
+    /* Adiciona uma borda sólida com 1 pixel de espessura e 
+            cor cinza (#888) ao redor do conteúdo da modal, 
+            ajudando a definir visualmente a área do 
+            conteúdo da modal. */
+
+    width: 80%;
+    /* Define a largura do conteúdo da modal como 80% da 
+            largura de seu contêiner pai, o que ajuda a 
+            manter a modal responsivamente adequada a 
+            diferentes tamanhos de tela. */
+
+    text-align: center;
+    /* Alinha o texto e outros elementos inline ao 
+            centro do contêiner do conteúdo da modal. */
+            
+}
+
+.botao {
+
+    margin: 10px;
+    /* Adiciona uma margem de 10 pixels em todas as direções ao 
+            redor de cada botão, separando-os visualmente de 
+            outros elementos. */
+
+    padding: 10px 20px;
+    /* Adiciona um preenchimento dentro do botão com 10 pixels na 
+            vertical e 20 pixels na horizontal, tornando o botão 
+            maior e mais fácil de clicar. */
+
+    font-size: 16px;
+    /* Define o tamanho da fonte dentro do botão para 16 pixels, o 
+            que é adequado para a legibilidade e destaque do 
+            texto dentro do botão. */
+
+}
